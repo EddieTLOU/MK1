@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mortal Kombat 1 - The Tournament Begins</title>
+    <title>Mortal Kombat (2021) - Stream</title>
     
     <link rel="icon" type="image/png" href="https://assets.gqindia.com/photos/602b9e69de64e79204013149/1:1/w_1080,h_1080,c_limit/Mortal%20Kombat.jpg">
 
@@ -33,7 +33,7 @@
 
         header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             animation: fadeInDown 1s ease-out;
         }
 
@@ -68,70 +68,94 @@
             text-shadow: 2px 2px #000;
         }
 
-        /* Epic Arcade/Arena Video Frame */
+        /* FIXED LANDSCAPE VIDEO CONTAINER */
         .video-container {
             width: 100%;
             max-width: 960px;
+            aspect-ratio: 16 / 9; /* Forces a landscape shape */
             background-color: #000;
             border: 4px solid #333;
             border-image: linear-gradient(to bottom right, #ff4400, #ffcc00, #333) 1;
             box-shadow: 0 0 35px rgba(255, 68, 0, 0.4);
-            position: relative;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         video {
             width: 100%;
+            height: 100%;
+            object-fit: contain; /* Keeps widescreen formatting without stretching */
             display: block;
         }
 
-        /* Fight Arena Layout Details */
-        .arena-details {
+        /* FIGHTER SELECT CONTAINER */
+        .character-select-area {
             max-width: 960px;
             width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
             background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
             padding: 25px;
             border-radius: 4px;
             border-top: 3px solid #ff4400;
             box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            text-align: center;
         }
 
-        .box {
-            background: rgba(0, 0, 0, 0.4);
-            padding: 15px;
-            border: 1px solid #222;
-        }
-
-        .box h2 {
+        .character-select-area h2 {
             font-family: 'Orbitron', sans-serif;
             color: #ffcc00;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             text-transform: uppercase;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #ff4400;
-            padding-bottom: 5px;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
         }
 
-        .fighter-list {
-            list-style: none;
+        /* Grid for buttons */
+        .fighter-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5px;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .fighter-btn {
+            background: #222;
             color: #ff4400;
+            border: 2px solid #444;
+            padding: 12px 5px;
+            font-family: 'Orbitron', sans-serif;
             font-weight: bold;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.2s ease;
         }
 
-        .fighter-list li::before {
-            content: "⚡ ";
+        .fighter-btn:hover {
+            background: #ff4400;
+            color: #fff;
+            border-color: #ffcc00;
+            box-shadow: 0 0 10px rgba(255, 68, 0, 0.6);
+            transform: translateY(-2px);
         }
 
-        .hype-text {
-            color: #ccc;
-            line-height: 1.6;
-            font-style: italic;
+        .fighter-btn.active {
+            background: #ffcc00;
+            color: #000;
+            border-color: #fff;
+            box-shadow: 0 0 15px rgba(255, 204, 0, 0.8);
+        }
+
+        /* Selection Output Box */
+        .selection-display {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 1.8rem;
+            color: #fff;
+            text-shadow: 2px 2px #000;
+            min-height: 40px;
+            margin-top: 10px;
+            letter-spacing: 1px;
         }
 
         /* Animations */
@@ -144,11 +168,6 @@
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
-        @media (max-width: 768px) {
-            .arena-details { grid-template-columns: 1fr; }
-            h1 { font-size: 2rem; }
-        }
     </style>
 </head>
 <body>
@@ -156,33 +175,49 @@
     <header>
         <img src="https://logos-world.net/wp-content/uploads/2020/11/Mortal-Kombat-Logo.png" alt="Mortal Kombat Logo" class="logo">
         <h1>Mortal Kombat</h1>
-        <div class="subtitle">TEST YOUR MIGHT!</div>
+        <div class="subtitle">GET OVER HERE!</div>
     </header>
 
     <main class="video-container">
         <video controls>
-            <source src="https://archive.org/download/mortal-kombat-bluray-1080p/Mortal%20Kombat%20%282021%29.mp4" type="video/mp4">
+            <source src="https://archive.org/download/mortal-kombat-bluray-1080p/Mortal%20Kombat%20-%20Bluray-1080p.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </main>
 
-    <section class="arena-details">
-        <div class="box">
-            <h2>Select Your Fighter</h2>
-            <ul class="fighter-list">
-                <li>Liu Kang</li>
-                <li>Johnny Cage</li>
-                <li>Sonya Blade</li>
-                <li>Sub-Zero</li>
-                <li>Scorpion</li>
-                <li>Raiden</li>
-            </ul>
+    <section class="character-select-area">
+        <h2>Choose Your Fighter</h2>
+        
+        <div class="fighter-grid">
+            <button class="fighter-btn" onclick="selectFighter('Cole Young')">Cole Young</button>
+            <button class="fighter-btn" onclick="selectFighter('Scorpion')">Scorpion</button>
+            <button class="fighter-btn" onclick="selectFighter('Sub-Zero')">Sub-Zero</button>
+            <button class="fighter-btn" onclick="selectFighter('Liu Kang')">Liu Kang</button>
+            <button class="fighter-btn" onclick="selectFighter('Kung Lao')">Kung Lao</button>
+            <button class="fighter-btn" onclick="selectFighter('Sonya Blade')">Sonya Blade</button>
+            <button class="fighter-btn" onclick="selectFighter('Jax')">Jax</button>
+            <button class="fighter-btn" onclick="selectFighter('Kano')">Kano</button>
         </div>
-        <div class="box">
-            <h2>Kombat Zone</h2>
-            <p class="hype-text">Turn down the lights, pump up the volume, and get ready for the ultimate cinematic tournament. A flawless victory awaits. Excellent!</p>
-        </div>
+
+        <div class="selection-display" id="chosenFighter">Select a Kombatant...</div>
     </section>
+
+    <script>
+        function selectFighter(name) {
+            // Update Text Display
+            document.getElementById('chosenFighter').innerText = name + " Selected!";
+            
+            // Toggle Visual Button Highlights
+            const buttons = document.querySelectorAll('.fighter-btn');
+            buttons.forEach(btn => {
+                if(btn.innerText === name.toUpperCase()) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>
