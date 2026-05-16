@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mortal Kombat 1 - The Tournament Begins</title>
     
-    <!-- Tab Icon (Favicon) using your logo link -->
-    <link rel="icon" type="image/png" href="https://logos-world.net/wp-content/uploads/2020/11/Mortal-Kombat-Logo.png">
+    <!-- Tab Icon (Favicon) using the high-res dragon emblem -->
+    <link rel="icon" type="image/png" href="https://assets.gqindia.com/photos/602b9e69de64e79204013149/1:1/w_1080,h_1080,c_limit/Mortal%20Kombat.jpg">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Orbitron:wght@700;900&display=swap');
@@ -38,10 +38,11 @@
             animation: fadeInDown 1s ease-out;
         }
 
-        /* Animated Flame Glowing Logo */
         .logo {
             max-width: 320px;
+            width: 100%;
             height: auto;
+            object-fit: contain;
             margin-bottom: 10px;
             filter: drop-shadow(0 0 15px rgba(255, 68, 0, 0.8));
             animation: pulse 2s infinite alternate;
@@ -154,17 +155,17 @@
 <body>
 
     <header>
-        <!-- Your Logo -->
+        <!-- Logo Image Link -->
         <img src="https://logos-world.net/wp-content/uploads/2020/11/Mortal-Kombat-Logo.png" alt="Mortal Kombat Logo" class="logo">
         <h1>Mortal Kombat</h1>
         <div class="subtitle">TEST YOUR MIGHT!</div>
     </header>
 
     <main class="video-container">
-        <!-- Direct Google Drive Streaming Link for your MK Bluray file -->
-        <video controls poster="">
-            <source src="https://drive.google.com/uc?export=download&id=1r8p04aWR0wAqJ1Hnq48yXxVSNPVXXBYG" type="video/mp4">
-            Your browser does not support the video tag.
+        <!-- Live stream setup pointing directly to your MKV file on Archive.org -->
+        <video controls>
+            <source src="https://archive.org/download/mortal-kombat-bluray-1080p/Mortal%20Kombat%20-%20Bluray-1080p.mkv" type="video/x-matroska">
+            Your browser does not support the video tag or MKV streaming playback.
         </video>
     </main>
 
