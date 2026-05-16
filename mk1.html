@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortal Kombat 1 - Stream</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #111;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Logo Styling */
+        .logo {
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 10px #ff3700);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ff5100;
+            text-shadow: 0 0 10px rgba(255, 81, 0, 0.5);
+        }
+
+        /* Video Container to keep aspect ratio */
+        .video-container {
+            width: 100%;
+            max-width: 900px;
+            background-color: #000;
+            border: 3px solid #ff5100;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(255, 81, 0, 0.3);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        video {
+            width: 100%;
+            display: block;
+        }
+
+        .movie-info {
+            max-width: 900px;
+            width: 100%;
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #ff5100;
+        }
+
+        .movie-info h2 {
+            color: #ff5100;
+            margin-bottom: 10px;
+        }
+
+        .movie-info p {
+            color: #bbb;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- 1. LOGO PLACEHOLDER: Replace 'https://logos-world.net/wp-content/uploads/2020/11/Mortal-Kombat-Logo.png' with your image link -->
+        <img src="PASTE_LOGO_URL_HERE" alt="Mortal Kombat Logo" class="logo">
+        <h1>Mortal Kombat (1995)</h1>
+    </header>
+
+    <main class="video-container">
+        <!-- 2. MOVIE FILE PLACEHOLDER: Replace 'PASTE_MOVIE_FILE_URL_HERE' with your video link -->
+        <video controls autoplay poster="">
+            <source src="PASTE_MOVIE_FILE_URL_HERE" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </main>
+
+    <section class="movie-info">
+        <h2>Choose Your Destiny</h2>
+        <p>Lord Raiden brings together three unrelated martial artists—comic-book movie star Johnny Cage, Special Forces officer Sonya Blade, and Shaolin monk Liu Kang—to a mysterious island to compete in a legendary tournament. If the outworld forces win one more time, Earthrealm will be destroyed.</p>
+    </section>
+
+</body>
+</html>
