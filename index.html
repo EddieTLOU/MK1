@@ -1,10 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mortal Kombat 1 - The Tournament Begins</title>
     
-    <!-- FIX: Using a perfectly square high-res dragon emblem so it never squishes -->
-    <link rel="icon" type="image/png" href="https://assets.gqindia.com/photos/602b9e69de64e79204013149/1:1/w_1080,h_1080,c_limit/Mortal%20Kombat.jpg">
+    <!-- Tab Icon (Favicon) using your logo link -->
+    <link rel="icon" type="image/png" href="https://logos-world.net/wp-content/uploads/2020/11/Mortal-Kombat-Logo.png">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Orbitron:wght@700;900&display=swap');
@@ -36,12 +38,10 @@
             animation: fadeInDown 1s ease-out;
         }
 
-        /* FIX: Added object-fit contain so the main page logo never warps or squishes */
+        /* Animated Flame Glowing Logo */
         .logo {
             max-width: 320px;
-            width: 100%;
             height: auto;
-            object-fit: contain;
             margin-bottom: 10px;
             filter: drop-shadow(0 0 15px rgba(255, 68, 0, 0.8));
             animation: pulse 2s infinite alternate;
@@ -151,3 +151,40 @@
         }
     </style>
 </head>
+<body>
+
+    <header>
+        <!-- Your Logo -->
+        <img src="https://logos-world.net/wp-content/uploads/2020/11/Mortal-Kombat-Logo.png" alt="Mortal Kombat Logo" class="logo">
+        <h1>Mortal Kombat</h1>
+        <div class="subtitle">TEST YOUR MIGHT!</div>
+    </header>
+
+    <main class="video-container">
+        <!-- Direct Google Drive Streaming Link for your MK Bluray file -->
+        <video controls poster="">
+            <source src="https://drive.google.com/uc?export=download&id=1r8p04aWR0wAqJ1Hnq48yXxVSNPVXXBYG" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </main>
+
+    <section class="arena-details">
+        <div class="box">
+            <h2>Select Your Fighter</h2>
+            <ul class="fighter-list">
+                <li>Liu Kang</li>
+                <li>Johnny Cage</li>
+                <li>Sonya Blade</li>
+                <li>Sub-Zero</li>
+                <li>Scorpion</li>
+                <li>Raiden</li>
+            </ul>
+        </div>
+        <div class="box">
+            <h2>Kombat Zone</h2>
+            <p class="hype-text">Turn down the lights, pump up the volume, and get ready for the ultimate cinematic tournament. A flawless victory awaits. Excellent!</p>
+        </div>
+    </section>
+
+</body>
+</html>
