@@ -68,7 +68,7 @@
             text-shadow: 2px 2px #000;
         }
 
-        /* Responsive Video Container for Embedded Player */
+        /* Epic Arcade/Arena Video Frame */
         .video-container {
             width: 100%;
             max-width: 960px;
@@ -78,18 +78,11 @@
             box-shadow: 0 0 35px rgba(255, 68, 0, 0.4);
             position: relative;
             margin-bottom: 40px;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
         }
 
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
+        video {
             width: 100%;
-            height: 100%;
-            border: none;
+            display: block;
         }
 
         /* Fight Arena Layout Details */
@@ -167,10 +160,10 @@
     </header>
 
     <main class="video-container">
-        <iframe src="https://drive.google.com/file/d/1r8p04aWR0wAqJ1Hnq48yXxVSNPVXXBYG/preview" 
-                allow="autoplay; encrypted-media" 
-                allowfullscreen>
-        </iframe>
+        <video controls>
+            <source src="https://archive.org/download/mortal-kombat-bluray-1080p/Mortal%20Kombat%20%282021%29.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </main>
 
     <section class="arena-details">
